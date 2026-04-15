@@ -13,14 +13,6 @@ builds:
       - linux
     goarch:
       - amd64
-      - 386
-      - arm
-      - arm64
-      - ppc64
-      - ppc64le
-    goarm:
-      - 6
-      - 7
 archives:
   - name_template: "process-exporter-{{ .Version }}.{{ .Os }}-{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
     wrap_in_directory: true
