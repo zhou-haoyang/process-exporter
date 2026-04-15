@@ -8,7 +8,7 @@ builds:
       - -X github.com/prometheus/common/version.Revision={{.FullCommit}}
       - -X main.version={{.Version}}
     env:
-      - CGO_ENABLED=0
+      - CGO_ENABLED=1
     goos:
       - linux
     goarch:
@@ -51,7 +51,7 @@ nfpms:
       preremove: "packaging/scripts/preremove.sh"
 release:
   github:
-    owner: ncabatoff
+    owner: zhou-haoyang
     name: process-exporter
   draft: false
   prerelease: true
